@@ -30,9 +30,8 @@
 #define LOADER_S_PSP_STACK_SIZE 0x0000400
 
 
-#ifdef ENABLE_HEAP
-    #define S_HEAP_SIZE             (0x0000200)
-#endif
+/* Patch from STM32Cube_FW_U5_V1.1.0\Projects\B-U585I-IOT02A\Applications\TFM\Linker: this define is not conditioned */
+#define S_HEAP_SIZE             (0x0000200)
 
 #define S_MSP_STACK_SIZE_INIT   0x0000400
 #define S_MSP_STACK_SIZE        0x0000800
