@@ -1,0 +1,32 @@
+frq09468@LMECWL0888 MINGW64 /c/trusted-firmware-m/build_as_is (master)
+$ cmake .. -DTFM_PLATFORM=stm/b_u585i_iot02a -DTFM_TOOLCHAIN_FILE=../toolchain_GNUARM.cmake -G"Unix Makefiles" .
+------------ Display partition configuration - start ------------
+   Non-Secure Mailbox Agent                  OFF
+   Protected Storage Partition               OFF
+   TF-M Internal Trusted Storage Partition   OFF
+   TFM Audit Log Partition                   OFF
+   TFM Crypto Partition                      OFF
+   TFM Platform Partition                    ON
+   TFM Initial Attestation Partition         OFF
+   TF-M PSA Proxy Partition                  OFF
+   TFM Firmware Update Partition             ON
+------------ Display partition configuration - end ------------
+Start to generate partition files:
+Generating TFM Platform Partition in C:/trusted-firmware-m/build_as_is/generated/secure_fw/partitions/platform
+Generating TFM Firmware Update Partition in C:/trusted-firmware-m/build_as_is/generated/secure_fw/partitions/firmware_update
+Per-partition files done:
+CMake Error at platform/ext/target/stm/b_u585i_iot02a/accelerator/CMakeLists.txt:84 (target_include_directories):
+  Cannot specify include directories for target "crypto_service_mbedcrypto"
+  which is not built by this project.
+Call Stack (most recent call first):
+  platform/ext/accelerator/stm/CMakeLists.txt:37 (include)
+
+
+CMake Error at platform/ext/accelerator/stm/CMakeLists.txt:41 (target_link_libraries):
+  Cannot specify link libraries for target "crypto_service_mbedcrypto" which
+  is not built by this project.
+
+
+-- Configuring incomplete, errors occurred!
+See also "C:/trusted-firmware-m/build_as_is/CMakeFiles/CMakeOutput.log".
+See also "C:/trusted-firmware-m/build_as_is/CMakeFiles/CMakeError.log".

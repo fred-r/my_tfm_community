@@ -28,3 +28,8 @@ set(PLATFORM_DEFAULT_OTP_WRITEABLE      OFF         CACHE BOOL      "Use on chip
 set(PLATFORM_DEFAULT_NV_COUNTERS        OFF         CACHE BOOL      "Use default nv counter implementation.")
 set(PS_CRYPTO_AEAD_ALG                  PSA_ALG_GCM CACHE STRING    "The AEAD algorithm to use for authenticated encryption in Protected Storage")
 set(MCUBOOT_FIH_PROFILE                 LOW         CACHE STRING    "Fault injection hardening profile [OFF, LOW, MEDIUM, HIGH]")
+################################## Disable features not used in Cube U5 #########
+# set(TFM_PARTITION_PROTECTED_STORAGE     OFF          CACHE BOOL      "Enable Protected Storage partition")
+# set(TFM_PARTITION_INTERNAL_TRUSTED_STORAGE OFF       CACHE BOOL      "Enable Internal Trusted Storage partition")
+# set(TFM_PARTITION_CRYPTO                OFF          CACHE BOOL      "Enable Crypto partition")
+# set(TFM_PARTITION_INITIAL_ATTESTATION   OFF          CACHE BOOL      "Enable Initial Attestation partition")
