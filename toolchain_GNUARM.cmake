@@ -135,8 +135,11 @@ macro(tfm_toolchain_reload_compiler)
         message(FATAL_ERROR "Please use newer GNU Arm compiler version starting from 7.3.1.")
     endif()
 
+	message(DEBUG "CMAKE_C_COMPILER is: '${CMAKE_C_COMPILER}'")
+	message(DEBUG "GCC_VERSION is: '${GCC_VERSION}'")
+
     if (GCC_VERSION VERSION_EQUAL 10.2.1)
-        message(FATAL_ERROR "GNU Arm compiler version 10-2020-q4-major has an issue in CMSE support."
+        message(WARNING "GNU Arm compiler version 10-2020-q4-major has an issue in CMSE support."
                             " Select other GNU Arm compiler versions instead."
                             " See https://gcc.gnu.org/bugzilla/show_bug.cgi?id=99157 for the issue detail.")
     endif()
