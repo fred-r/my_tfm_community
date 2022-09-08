@@ -1,0 +1,5 @@
+ cmake .. -DTFM_PLATFORM=stm/b_u585i_iot02a -DTFM_TOOLCHAIN_FILE=../toolchain_GNUARM.cmake -G"Unix Makefiles" .
+ cmake --build .
+ cmake --install .
+ ./postbuild.sh
+ 
